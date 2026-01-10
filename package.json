@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pages:build": "next build",
+    "pages:deploy": "npm run pages:build && wrangler pages deploy out"
   },
   "repository": {
     "type": "git",
