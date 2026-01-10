@@ -1,3 +1,29 @@
 # About
 
-TBD
+## How Resonance Frequencies Are Determined
+
+Pingcoin uses reference resonance frequencies to authenticate coins. These reference values are obtained through different methods depending on the coin type.
+
+### Measured Resonance Frequencies
+
+For coins added by the Pingcoin team, reference frequencies are based on empirical measurements:
+
+- At least 10 recordings from unique physical specimens are analyzed
+- Multiple pings are recorded from each specimen
+- The average value for each resonance frequency is calculated from this data
+
+This approach ensures robust reference values that account for the natural variation between authentic coins of the same type.
+
+### Community-Added Coins
+
+Coins added by the community typically have fewer recordings available (less than 10 specimens). As a result, the tolerances for these coins are wider to accommodate the smaller sample size.
+
+### Calculated Resonance Frequencies
+
+The app also offers a calculated resonance frequency option. This is based on:
+
+- Physical dimension measurements (diameter, thickness) as input
+- Finite Element Method (FEM) simulation
+- An analytical model that has been fine-tuned with empirical data
+
+This calculated approach allows the app to estimate resonance frequencies for coins that haven't been extensively measured, while the empirical fine-tuning helps ensure accuracy.
