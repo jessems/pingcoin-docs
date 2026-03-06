@@ -1,0 +1,113 @@
+# How It Works
+
+Understanding the science behind Pingcoin helps you use it effectively and trust its results.
+
+## The Physics of Sound
+
+When you tap a coin, it vibrates. These vibrations create pressure waves in the air — what we hear as sound. The characteristics of this sound depend entirely on the coin's physical properties.
+
+### Resonance Frequencies
+
+Every object has natural frequencies at which it "wants" to vibrate — these are called resonance frequencies. For a coin, these frequencies depend on:
+
+| Factor | Effect on Sound |
+|--------|-----------------|
+| **Material composition** | Different metals vibrate at different frequencies. Gold, silver, copper, and tungsten all have unique acoustic signatures. |
+| **Diameter** | Larger coins have lower base frequencies |
+| **Thickness** | Thicker coins have higher frequencies |
+| **Mass distribution** | Relief patterns affect how vibrations propagate |
+
+### Why This Defeats Counterfeits
+
+A counterfeiter trying to fake a gold coin faces a fundamental problem: they need to match the weight (so it passes scale tests) and the size (so it looks right). But if they use a cheaper metal, the acoustic signature will be completely different.
+
+**Tungsten-core fakes** are particularly interesting. Tungsten has nearly the same density as gold, so a tungsten-filled coin can pass weight tests perfectly. However, tungsten has very different elastic properties:
+
+- **Gold**: Soft, ductile, rings beautifully with sustained vibration
+- **Tungsten**: Hard, brittle, produces a dull "thud" that decays quickly
+
+This acoustic difference is unmistakable to Pingcoin's analysis.
+
+## The Analysis Process
+
+Here's what happens when you test a coin:
+
+### 1. Recording
+The app records 2-3 seconds of audio using your phone's microphone after you tap the coin.
+
+### 2. Fast Fourier Transform (FFT)
+The raw audio waveform is converted into a frequency spectrum using FFT — a mathematical technique that reveals which frequencies are present and how strong each one is.
+
+### 3. Peak Detection
+The algorithm identifies the dominant frequency peaks in the spectrum. Coins typically produce several distinct peaks corresponding to different vibration modes.
+
+### 4. Pattern Matching
+These peaks are compared against our database of reference values for the coin type you're testing. The app looks for:
+- Correct frequency positions (within tolerance)
+- Appropriate peak ratios
+- Expected decay characteristics
+
+### 5. Verdict
+Based on how well the recorded frequencies match the expected pattern, the app returns:
+- ✅ **Pass** — Frequencies match authentic coin profile
+- ❌ **Fail** — Significant frequency mismatch detected
+- ⚠️ **Inconclusive** — Unable to make a confident determination
+
+## Understanding Results
+
+### A Pass Means...
+
+Both the geometry AND material properties of your coin fall within the expected range for authentic coins. This is strong evidence of authenticity.
+
+### A Fail Means...
+
+The coin's acoustic signature differs significantly from authentic examples. This could indicate:
+- Counterfeit coin (wrong material)
+- Wrong coin type selected
+- Damaged or altered coin
+- Environmental interference during testing
+
+### Inconclusive Results
+
+Sometimes the app can't make a confident call. This might happen due to:
+- Background noise
+- Coin not ringing cleanly (poor tap technique)
+- Unusual but legitimate coin variant
+- Microphone limitations
+
+See our [Testing Guide](/testing-guide) for tips on getting clean results.
+
+## Frequency Examples
+
+Here are typical resonance frequencies for popular coins:
+
+| Coin | Primary Frequency | Ring Duration |
+|------|-------------------|---------------|
+| American Silver Eagle (1 oz) | ~6,145 Hz | 8-12 seconds |
+| Canadian Silver Maple Leaf | ~6,200 Hz | 4-6 seconds* |
+| Gold Krugerrand (1 oz) | ~4,523 Hz | 10-15 seconds |
+| Gold American Eagle (1 oz) | ~4,100 Hz | 8-12 seconds |
+
+*The Silver Maple Leaf's shorter ring is due to its .9999 fine silver composition — see [False Positives](/false-positives) for details.
+
+## Limitations
+
+No testing method is perfect. Acoustic testing has some limitations:
+
+1. **Requires a clean tap** — Poor technique can produce unclear results
+2. **Ambient noise sensitive** — Test in a quiet environment
+3. **Phone microphone quality varies** — Results may differ between devices
+4. **Some edge cases exist** — See [False Positives](/false-positives)
+
+For high-value purchases, we recommend using Pingcoin alongside other verification methods like weight/dimension checks and visual inspection.
+
+## The Technology Stack
+
+For the technically curious, Pingcoin uses:
+
+- **TarsosDSP** — Real-time audio processing library for pitch detection and FFT
+- **FFTpack** — Efficient Fast Fourier Transform implementation
+- **Firebase** — User authentication and cloud storage
+- **MPAndroidChart** — Frequency spectrum visualization
+
+The core algorithm is open source, so you can review exactly how your coins are being analyzed.
