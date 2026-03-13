@@ -1,3 +1,49 @@
-# About
+# About Pingcoin
 
-TBD
+Pingcoin is an open-source mobile app that detects counterfeit gold and silver coins using acoustic analysis. It's a modern, scientific implementation of the centuries-old "ping test" — the technique merchants and bankers have used for generations to verify precious metals.
+
+## The Problem We Solve
+
+The precious metals market has a counterfeit problem. Sophisticated fakes — particularly tungsten-core coins — can fool weight tests, pass visual inspection, and even defeat some electronic testing methods. For collectors and investors, the anxiety of owning potentially fake coins is real.
+
+Professional verification equipment like Sigma Metalytics testers cost $1,500+, and XRF analyzers run $30,000 or more. For the average person buying a few coins at a time, these solutions are impractical.
+
+## How Pingcoin Works
+
+When you tap a coin, it vibrates at frequencies determined by two things:
+1. **Geometry** — diameter, thickness, and relief pattern
+2. **Material properties** — density, elasticity, and composition
+
+These frequencies create a unique acoustic "fingerprint." A genuine 1 oz American Silver Eagle produces a specific set of frequencies that a fake simply cannot replicate without matching both the exact geometry AND the exact material composition.
+
+The Pingcoin app records your coin's sound, performs Fast Fourier Transform (FFT) analysis to extract the frequency content, and compares it against our database of reference values. The verdict comes in seconds.
+
+## Why the Ping Test Works
+
+Counterfeiters face an impossible dilemma: to match a coin's sound, they must match its material. If they use cheaper metals, the sound changes. If they use tungsten (which has similar density to gold), the acoustic properties are completely different — tungsten produces a dead "thunk" while gold rings beautifully.
+
+This multi-variable challenge makes acoustic testing remarkably effective against even sophisticated counterfeits.
+
+## Our Story
+
+Pingcoin was created by [Jesse Szepieniec](https://jessems.com), a software engineer and precious metals enthusiast who wanted a better way to verify his coins. After researching acoustic authentication and building on the scientific principles of resonance frequencies, Pingcoin launched on Android in 2019.
+
+Today, the app has been downloaded over 50,000 times and supports 37 different coin types across silver and gold categories.
+
+## Open Source
+
+Pingcoin is open source. We believe authentication tools should be transparent and verifiable. You can review the code, contribute improvements, or fork it for your own projects.
+
+- [Android App (GitHub)](https://github.com/jessems/pingcoin-android)
+- [API (GitHub)](https://github.com/jessems/pingcoin-api)
+- [Documentation (GitHub)](https://github.com/jessems/pingcoin-docs)
+
+## Getting in Touch
+
+- **Twitter/X:** [@jessems](https://twitter.com/jessems)
+- **Discord:** [Join our community](https://discord.gg/pingcoin)
+- **GitHub Issues:** Report bugs or request features
+
+---
+
+*"Trust, but verify." — Ancient proverb, modern necessity.*

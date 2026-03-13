@@ -1,13 +1,30 @@
 {
   "index": "Introduction",
+  "getting-started": "Getting Started",
+  "how-it-works": "How It Works",
+  "supported-coins": "Supported Coins",
+  "testing-guide": "Testing Guide",
+  "false-positives": "False Positives",
+  "troubleshooting": "Troubleshooting & FAQ",
+  "-- Resources": {
+    "type": "separator",
+    "title": "Resources"
+  },
   "about": {
     "title": "About",
     "type": "page"
   },
+  "privacy-policy": "Privacy Policy",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
     "href": "https://twitter.com/jessems",
+    "newWindow": true
+  },
+  "github": {
+    "title": "GitHub ↗",
+    "type": "page",
+    "href": "https://github.com/jessems/pingcoin-android",
     "newWindow": true
   }
 }
