@@ -17,6 +17,9 @@
     "url": "https://github.com/jessems/pingcoin-docs/issues"
   },
   "homepage": "https://docs.pingcoin.com",
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "dependencies": {
     "next": "^14.2.21",
     "nextra": "^2.13.4",
