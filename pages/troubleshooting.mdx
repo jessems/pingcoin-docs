@@ -1,0 +1,162 @@
+# Troubleshooting & FAQ
+
+Solutions to common issues and answers to frequently asked questions.
+
+## Common Issues
+
+### The app won't record audio
+
+**Symptoms:** Tap the coin but nothing happens, or recording stays at zero.
+
+**Solutions:**
+1. **Check microphone permissions**
+   - Android: Settings → Apps → Pingcoin → Permissions → Microphone → Allow
+2. **Restart the app** — Force close and reopen
+3. **Check if another app is using the mic** — Close other apps that might be recording
+4. **Test your microphone** — Use a voice recorder app to verify the mic works
+5. **Phone case issue** — Some cases block the microphone hole
+
+### My authentic coin keeps failing
+
+**Symptoms:** You're confident the coin is real, but it consistently fails.
+
+**Check these:**
+
+| Cause | Solution |
+|-------|----------|
+| Wrong coin selected | Verify exact coin type, weight, and denomination |
+| Damaged coin | Cleaned, bent, or repaired coins have altered acoustics |
+| Environmental issue | Test in a quieter location |
+| Year variant | Some production years have slightly different specs |
+| Device microphone | Try with a different phone if possible |
+
+**Still failing?** It's possible you have:
+- A legitimate variant we haven't calibrated for
+- An actual counterfeit (verify with other methods)
+- A coin that was altered (re-struck, filled, etc.)
+
+### Results are inconsistent
+
+**Symptoms:** Pass one time, fail the next, inconclusive sometimes.
+
+**Fix your technique:**
+1. **Standardize everything** — Same tap spot, same force, same phone position
+2. **Quiet environment** — Even minor background noise causes variation
+3. **Clean the coin** — Residue affects vibration
+4. **Stable surface** — Don't let the coin move during recording
+5. **Run 5 tests** — Majority result is most reliable
+
+### "Inconclusive" on every test
+
+**Symptoms:** The app can't make a determination.
+
+**Usually means:**
+- Background noise is too high → Find quieter spot
+- Recording is too quiet → Get phone closer
+- Poor tap technique → Practice getting a clean ring
+- Microphone issue → Test with voice recorder app
+
+### App crashes
+
+**Solutions:**
+1. **Update the app** — Get latest version from Play Store
+2. **Clear cache** — Settings → Apps → Pingcoin → Storage → Clear Cache
+3. **Restart phone** — Classic fix
+4. **Reinstall** — Uninstall and reinstall
+5. **Report bug** — [Open GitHub issue](https://github.com/jessems/pingcoin-android/issues)
+
+### Can't sign in / "You must be signed in" error
+
+**On GrapheneOS or phones without Google Play Services:**
+
+This is a known issue. The app uses Firebase Authentication which normally requires Google Play Services. 
+
+**Workarounds:**
+- Use the app in anonymous mode (testing works without sign-in)
+- Wait for the upcoming update with REST API fallback
+
+---
+
+## Frequently Asked Questions
+
+### General
+
+**Q: How accurate is Pingcoin?**
+
+A: Very accurate for detecting wrong-material counterfeits (the vast majority of fakes). The app analyzes resonance frequencies that depend on material composition — fakes made of different metals will fail. However, no method is 100%. A coin struck from the correct material at an unofficial mint could theoretically pass.
+
+**Q: Can counterfeiters fake the sound?**
+
+A: To match a coin's acoustic signature, a counterfeiter would need to match both the exact geometry AND the exact material composition. At that point, they're essentially making a real coin (minus official mint marks). The economics don't work for bullion fakes.
+
+**Q: Does Pingcoin work on tungsten fakes?**
+
+A: Yes! This is actually where acoustic testing excels. Tungsten has nearly the same density as gold, so it passes weight tests. But tungsten has completely different acoustic properties — it produces a dead "thunk" instead of gold's sustained ring. Pingcoin catches what other tests miss.
+
+**Q: Is Pingcoin free?**
+
+A: The app is free for up to 10 tests per month. Unlimited testing is $29/year. Testing locally authenticated coins (comparing against your own verified coins) is always free.
+
+### Technical
+
+**Q: What frequencies does Pingcoin look for?**
+
+A: It depends on the coin. A typical 1 oz silver coin resonates around 6,000-6,500 Hz with multiple harmonic peaks. Gold coins (being denser) typically resonate lower, around 4,000-5,000 Hz for 1 oz sizes. The app looks for the specific pattern of peaks expected for each coin type.
+
+**Q: Why does my Silver Maple Leaf ring shorter than my Silver Eagle?**
+
+A: Purity! The Maple Leaf is .9999 fine silver (99.99% pure), while the Eagle is .999 (99.9%). The extra purity makes the Maple Leaf softer, causing internal damping that shortens the ring duration. This is completely normal. See [False Positives](/false-positives) for details.
+
+**Q: Does the phone microphone quality matter?**
+
+A: Somewhat. Most modern smartphone microphones are sufficient. Very old or damaged phones might struggle. The app is designed to work with typical smartphone hardware.
+
+**Q: Can I test slabbed/encapsulated coins?**
+
+A: Slabbed coins can be tested, but with reduced accuracy. The plastic case affects vibration. For best results, test raw (unslabbed) coins. If you must test slabbed coins, tap gently on the case edge and expect potentially higher variance in results.
+
+### Coins
+
+**Q: Why isn't [specific coin] supported?**
+
+A: We add coins based on demand and availability of reference data. [Request new coins here](https://github.com/jessems/pingcoin-android/issues).
+
+**Q: Can I test coins not in your database?**
+
+A: The app needs reference data to compare against. Without reference frequencies, it can't determine authenticity. You can submit coins you'd like added.
+
+**Q: Do fractional coins work the same way?**
+
+A: Yes, but each size needs separate calibration. A 1/4 oz coin has different frequencies than a 1 oz coin of the same type due to smaller dimensions.
+
+**Q: What about proof coins vs bullion coins?**
+
+A: Proof coins have the same dimensions and material, so they should test the same. However, some proofs have slightly different finishes that could marginally affect results.
+
+### Privacy & Security
+
+**Q: Does the app record everything?**
+
+A: No. Audio recording only happens when you actively tap the record button. Recordings are processed locally. Only coin submissions (voluntary) upload data.
+
+**Q: What data does Pingcoin collect?**
+
+A: See our [Privacy Policy](/privacy-policy). We collect minimal data: account info if you sign up, and voluntary coin submissions to improve our database.
+
+**Q: Is my coin data shared?**
+
+A: Only if you voluntarily submit a coin to help expand the database. Test results and recordings are not shared.
+
+---
+
+## Still Need Help?
+
+- **GitHub Issues:** [Report bugs or problems](https://github.com/jessems/pingcoin-android/issues)
+- **Discord:** [Join our community](https://discord.gg/pingcoin) for help from other users
+- **Twitter/X:** [@jessems](https://twitter.com/jessems)
+
+When reporting issues, please include:
+- Phone model and Android version
+- App version
+- Steps to reproduce the problem
+- Screenshots if relevant

@@ -1,7 +1,67 @@
-# Introduction
- 
-Welcome to the Pingcoin docs.
+# Pingcoin Documentation
+
+Welcome to the official documentation for Pingcoin — the open-source app that detects counterfeit gold and silver coins using acoustic analysis.
 
 ## What is Pingcoin?
 
-Pingcoin is an open-source counterfeit coin detector app. It's a modern reincarnation of the age old ping test and works by comparing a coin's resonance frequencies to reference values.
+Pingcoin is a modern implementation of the centuries-old "ping test." When you tap a genuine precious metal coin, it produces a distinctive ring determined by its material composition and geometry. Counterfeit coins made from different metals produce noticeably different sounds.
+
+The app uses your smartphone's microphone to record the tap, performs Fast Fourier Transform (FFT) analysis to extract frequency content, and compares it against our database of authentic coin signatures. Results come in seconds.
+
+## Why Use Pingcoin?
+
+| Problem | Pingcoin Solution |
+|---------|-------------------|
+| Tungsten-filled fakes pass weight tests | Acoustic test detects tungsten's dead "thunk" |
+| Professional testers cost $1,500+ | Smartphone app costs $29/year (or free with limits) |
+| Visual inspection misses sophisticated fakes | Sound analysis reveals material composition |
+| Uncertainty about coin purchases | Quick verification before you buy |
+
+## Quick Links
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+
+**[Getting Started →](/getting-started)**  
+Download the app and test your first coin in under 5 minutes.
+
+**[How It Works →](/how-it-works)**  
+Understand the science behind acoustic authentication.
+
+**[Supported Coins →](/supported-coins)**  
+See all 37 coins we can currently test.
+
+**[Testing Guide →](/testing-guide)**  
+Master the art of getting accurate results.
+
+**[Troubleshooting →](/troubleshooting)**  
+Solutions to common issues and FAQ.
+
+</div>
+
+## Download
+
+<a href="https://play.google.com/store/apps/details?id=com.pingcoin.android.pingcoin" target="_blank" style={{display: 'inline-block', marginTop: '1rem'}}>
+  **→ Get Pingcoin on Google Play**
+</a>
+
+*iOS version coming soon.*
+
+## Open Source
+
+Pingcoin is fully open source. Inspect the code, contribute improvements, or learn from our implementation:
+
+- [Android App](https://github.com/jessems/pingcoin-android)
+- [API](https://github.com/jessems/pingcoin-api)
+- [Documentation](https://github.com/jessems/pingcoin-docs)
+- [Website](https://github.com/jessems/pingcoin-website)
+
+## Stats
+
+- **50,000+** downloads
+- **37** supported coin types
+- **6+ years** in production
+- **4.35/5** average rating
+
+---
+
+*Questions? Check our [FAQ](/troubleshooting#frequently-asked-questions) or reach out on [Twitter](https://twitter.com/jessems).*
